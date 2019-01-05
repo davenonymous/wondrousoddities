@@ -1,16 +1,13 @@
 package com.nyuppo.wondrousoddities.init;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import com.nyuppo.wondrousoddities.items.ItemBase;
+import com.nyuppo.wondrousoddities.util.Reference;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
-import net.minecraft.item.Item;
-
+@GameRegistry.ObjectHolder(Reference.MOD_ID)
 public class ModItems {
 
-	public static final List<Item> ITEMS = new ArrayList<Item>();
-	
-	public static final Item INDIGO = new ItemBase("indigo");
-	
+	@GameRegistry.ObjectHolder("indigo")
+	public static final ItemBase INDIGO = new ItemBase("indigo");
+
 }

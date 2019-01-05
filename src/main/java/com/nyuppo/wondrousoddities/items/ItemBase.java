@@ -9,19 +9,22 @@ import net.minecraft.item.Item;
 
 public class ItemBase extends Item implements IHasModel{
 
+	private String name;
+	
 	public ItemBase(String name) {
 		
 		setUnlocalizedName(name);
 		setRegistryName(name);
 		setCreativeTab(CreativeTabs.MATERIALS);
 		
+		this.name = name;
+		
 		ModItems.ITEMS.add(this);
 	}
 	
 	@Override
 	public void registerModels() {
-		
-		Main.proxy.registerItemRenderer(this, 0, "inventory");
+		Main.proxy.registerItemRenderer(this, 0, name);
 	}
 
 }
